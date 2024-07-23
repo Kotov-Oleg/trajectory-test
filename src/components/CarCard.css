@@ -1,0 +1,32 @@
+.car-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-bottom: 7px;
+}
+
+.card-line {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 28px;
+  line-height: 28px;
+  font-size: 16px;
+  margin: 2px 0;
+}
+
+.input {
+  font-size: 16px;
+}
+
+.input:disabled {
+  border: none;
+  background: none;
+  color: black;
+}
