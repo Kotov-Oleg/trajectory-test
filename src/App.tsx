@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import data from './data.json';
 
 import './App.css';
 import CarCard from './components/CarCard';
@@ -55,7 +56,7 @@ const comparativeFunction = (sortOption: string) => {
 };
 
 function App() {
-  const [cars, setCars] = useState<CarI[]>([]);
+  const [cars, setCars] = useState<CarI[]>(data);
   const [sortType, setSortType] = useState<string>(selectData[0].value);
 
   const editHandler = (editCar: CarI): void => {
@@ -74,10 +75,10 @@ function App() {
   }, [sortType, cars]);
 
   useEffect(() => {
-    axios.get('https://test.tspb.su/test-task/vehicles').then((response) => {
-      setCars(response.data);
-      console.log('cars', response.data);
-    });
+    // axios.get('https://test.tspb.su/test-task/vehicles').then((response) => {
+    //   setCars(response.data);
+    //   console.log('cars', response.data);
+    // });
   }, []);
 
   return (
